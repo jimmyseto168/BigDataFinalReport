@@ -30,8 +30,8 @@
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ["Element", "Num", { role: "style" }, { role: 'annotation' } ],
-        ["被領養", 10796, "#b87333",'72'],
-        ["未被領養", 4197, "silver",'27'],
+        ["被領養", 10796, "#FFFFBB",'72'],
+        ["未被領養", 4197, "#CCDDFF",'27'],
       ]);
       var view = new google.visualization.DataView(data);
       view.setColumns([0, 1,
