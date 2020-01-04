@@ -28,7 +28,7 @@
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ["Element", "Num", { role: "style" } ],
+        ["Element", "Num", { role: "style" }, { role: 'annotation' } ],
         ["被領養", 10796, "#b87333",'72%'],
         ["未被領養", 4197, "silver",'27%'],
 
