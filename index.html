@@ -251,14 +251,64 @@
       
     </script>
 
+<!-- 短中長毛 -->
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
 
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['有沒有被領養', '短', '中','長'],
+          ['有被領養', 6209, 3902, 685],
+          ['沒被領養', 2599, 1459, 139],
+        ])
 
+        var options = {
+         fontSize:24,
+          
+          chart: {
+            title: "被領養動物的毛髮差異",
+          
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material2'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
   
   
   
   
-  
-  
+  <!-- 收費差異 -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['有沒有被領養', 'Free', 'NotFree'],
+          ['有被領養', 9187, 1609],
+          ['沒被領養', 3476, 721],
+        ])
+
+        var options = {
+         fontSize:24,
+          
+          chart: {
+            title: "被領養動物的收養費差異",
+          
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material3'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
   
   
 
@@ -439,12 +489,17 @@
           <div id="columnchart_material" style="width: 500px; height: 400px;"></div> 
           
           <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+          <p>1 </p>
+          <p>2 </p>
+          <p>3 </p>
           
           <button id="change-chart">Change to Classic</button>
           <br><br>
           <div id="chart_div" style="width: 500px; height: 400px;"></div>
           
           <div id="columnchart_materia" style="width: 500px; height: 400px;"></div>
+          
+          <div id="columnchart_material" style="width: 500px; height: 400px;"></div>
          </div>
         <div>
           <p>1 </p>
@@ -458,7 +513,7 @@
           <p>3 </p>
 
           <div class="subheading mb-0">外在狀況</div>  
-          
+          <div id="columnchart_material3" style="width: 500px; height: 400px;"></div>
           <p>1 </p>
           <p>2 </p>
           <p>3 </p>
