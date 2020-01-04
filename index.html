@@ -441,6 +441,31 @@
     </script>
   
   
+ <!--圖像影片與領養的關係-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['有無被領養', '有被上傳圖像影片<=4個', '有被上傳圖像影片>4個'],
+          ['有被領養', 7069, 3727],
+          ['沒被領養', 3164, 1033]
+        ]);
+
+        var options = {
+          chart: {
+            title: '被上傳圖像+影片與領養之關係',
+            
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material5'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
   
   
 </head>
@@ -664,7 +689,7 @@
           <p>1 </p>
           <p>2 </p>
           <p>3 </p>
-
+          <div id="columnchart_material5" style="width: 500px; height: 400px;"></div>
           
           <p>7 </p>
           <p>8 </p>
