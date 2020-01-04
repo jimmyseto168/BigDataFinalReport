@@ -55,7 +55,33 @@
 
   
   
-  
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['有沒有被領養', '母', '公','混合'],
+          ['有被領養', 5095, 4094, 1494],
+          ['沒被領養', 2096, 1388, 661],
+        ])
+
+        var options = {
+         fontSize:24,
+          chart: {
+            title: "被領養動物的性別差異",
+          
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+    
   
   
   
@@ -234,6 +260,7 @@
           <div class="subheading mb-0">外在特徵</div>
           <div id="columnchart_values" style="width: 900px; height: 300px;"></div> 
           <div class="subheading mb-0">健康狀況</div>
+          <div id="columnchart_material" style="width: 500px; height: 400px;"></div>
           <div class="subheading mb-0">外在狀況</div>
         </div>
       </div>
