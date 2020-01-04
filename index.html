@@ -175,7 +175,7 @@
           }
         };
 
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        var chart = new google.charts.Bar(document.getElementById('columnchart_materia'));
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
@@ -333,9 +333,6 @@
         <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0">圖表一</h3>
-            <button id="change-chart">Change to Classic</button>
-          <br><br>
-          <div id="chart_div" style="width: 800px; height: 500px;"></div>
             <div class="subheading mb-3">Intelitec Solutions</div>
             <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
           </div>
@@ -438,9 +435,16 @@
         <h2 class="mb-5">視覺資訊圖表</h2>
         <div class="social-icons">
           <div class="subheading mb-0">外在特徵</div>  
+          
           <div id="columnchart_material" style="width: 500px; height: 400px;"></div> 
+          
           <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
-          <div id="columnchart_material" style="width: 500px; height: 400px;"></div>
+          
+          <button id="change-chart">Change to Classic</button>
+          <br><br>
+          <div id="chart_div" style="width: 800px; height: 500px;"></div>
+          
+          <div id="columnchart_materia" style="width: 500px; height: 400px;"></div>
          </div>
         <div>
           <p>1 </p>
