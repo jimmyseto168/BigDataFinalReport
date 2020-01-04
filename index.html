@@ -378,8 +378,71 @@
     };
     </script>
   
+  <!-- 圓餅領養比例1 -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['color', '被領養比例'],
+          ['Black',  21.44],
+          ['Brown',  31.744],
+          ['Golden', 8.736],
+          ['Yellow', 3.81],
+          ['Cream', 11.456],
+          ['Gray', 6.943],
+          ['White', 15.87],
+          
+        ]);
 
+      var options = {
+        legend: 'none',
+        pieSliceText: 'label',
+        title: '毛色與被領養比例',
+        pieStartAngle: 100,
+      };
 
+        var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+        chart.draw(data, options);
+      }      
+    </script>
+ <!-- 圓餅領養比例1 -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['color', '不被領養比例'],
+          ['Black', 24.67],
+          ['Brown',  34.77],
+          ['Golden', 7.13],
+          ['Yellow', 4.74],
+          ['Cream', 9.29],
+          ['Gray', 6.69],
+          ['White', 12.7],
+          
+        ]);
+
+      var options = {
+        legend: 'none',
+        pieSliceText: 'label',
+        title: '毛色與不被領養比例',
+        pieStartAngle: 100,
+      };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+        chart.draw(data, options);
+      }
+
+    </script>
+  
+  
+  
+  
 </head>
   
 <body id="page-top">
@@ -577,6 +640,10 @@
           <p>2 </p>
           <p>3 </p>
           <div class="subheading mb-0">健康狀況</div> 
+          
+          <div id="piechart1" style="width: 4500px; height: 250px;"></div>
+          
+          <div id="piechart2" style="width: 450px; height: 250px;"></div>
           
           
           <p>1 </p>
