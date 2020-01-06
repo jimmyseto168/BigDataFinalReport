@@ -24,11 +24,27 @@
   
   
   
-   <style>
-    #Img1{
-    opacity: 0.5; //透明度設為 0.5
-    filter: alpha(opacity=50); // IE8 與更早的版本
-   }
+   <style type = "text/css">
+    .demo-bg{
+      background: url(img/cat.png) no-repeat;
+      background-size: cover;
+      width:500px;
+      height:300px;
+      position: relative;
+    }
+     .demo{
+       position:absolute;
+       left: 0;
+       right: 0;
+       top:0;
+       bottom:0;
+       width:500px;
+       height:300px;
+       line-height: 50px;
+       text-align: center;
+       background: rgba(255,255,255,0.3)
+
+     }
    </style>
   
   
@@ -643,7 +659,7 @@
       <div class="w-100">
         <h2 class="mb-5">結論</h2>
          <div>結論：從那麼多的流浪貓狗裡面，我們利用特徵分析，找出了符合<p>容易被領養的寵物，他們原本是有希望被領養的，<p>但可能因為頁數太多或各種原因沒有被發現到，儘管不能很完美，<p>但我們希望藉由這種方法幫助到更多可憐又可愛的貓咪狗狗們
-              <div><img src="img/cat.jpg" id="Img1"></div>
+              <div class= "demo-bg"> 背景圖半透明</div>
          </div>
         
       </div>
