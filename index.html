@@ -23,6 +23,16 @@
   
   
   
+  
+   <style>
+    #Img1{
+    opacity: 0.5; //透明度設為 0.5
+    filter: alpha(opacity=50); // IE8 與更早的版本
+   }
+   </style>
+  
+  
+  
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
     google.charts.load("current", {packages:['corechart']});
@@ -137,6 +147,7 @@
         function drawMaterialChart() {
           var materialChart = new google.charts.Bar(chartDiv);
           materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+          button.innerText = 'Change to Classic';
           button.onclick = drawClassicChart;
         }
 
@@ -237,6 +248,7 @@
         function drawMaterialChart() {
           var materialChart = new google.charts.Bar(chartDiv);
           materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+          button.innerText = 'Change to Classic';
           button.onclick = drawClassicChart;
         }
 
@@ -366,6 +378,7 @@
         function drawMaterialChart() {
           var materialChart = new google.charts.Bar(chartDiv);
           materialChart.draw(data, google.charts.Bar.convertOptions(materialOptions));
+          button.innerText = 'Change to Classic';
           button.onclick = drawClassicChart;
         }
 
@@ -626,14 +639,17 @@
 
     <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards"
+
+
+
       <div class="w-100">
         <h2 class="mb-5">結論</h2>
         <div>結論：從那麼多的流浪貓狗裡面，我們利用特徵分析，找出了符合<br>
                         容易被領養的寵物，他們原本是有希望被領養的，<br>
                         但可能因為頁數太多或各種原因沒有被發現到，儘管不能很完美，<br>
                         但我們希望藉由這種方法幫助到更多可憐又可愛的貓咪狗狗們</div>
-     
+        <div><img src="img/cat.jpg" id="Img1"></div>
       </div>
     </section>
 
